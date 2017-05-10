@@ -1,0 +1,614 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: #1e1e1e;
+    padding: 150px 0 0 0;
+    margin: 0;
+    font-family: 'Play', sans-serif;
+}
+
+header {
+    background: rgb(80,80,80);
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0px 2px 2px rgb(120,120,120);
+}
+
+.headerContainer {
+    width: 1920px;
+    margin: 0;
+    position: relative;
+    left: 120px;
+    height: 120px;
+    color: rgb(167,169,171);
+}
+
+.headerContainer h2 {
+    position: relative;
+    left: 180px;
+    top: 55px;
+    margin: 0;
+    padding: 0;
+    transform: translate(0, -50%);
+    font-size: 3em;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    left: 340;
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    display: inline-block;
+}
+
+.title {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.nav-bar {
+    display: inline-block;
+    position: relative;
+    left: 180px;
+    top: 30px;
+}
+
+.nav-bar .nav-btn {
+    background: rgb(80,80,80);
+    padding: 12px;
+    border: none;
+    color: yellow;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Play', sans-serif;
+    width: 150px;
+    outline: none;
+    position: relative;
+
+}
+
+.nav-bar .nav-btn:hover {
+    background: #1e1e1e;
+}
+
+iframe {
+    width: 700px;
+    height: 393px;
+    margin: 50px 280px;
+}
+
+.login, .user {
+    position: fixed;
+    top: 240px;
+    right: 70px;
+    font-family: 'Play', sans-serif;
+}
+
+.user {
+    display: none;
+}
+
+.login h2, .user h2 {
+    background: yellow;
+    margin: 0;
+    padding: 12px;
+}
+
+.loginContainer, .userContainer {
+    background: rgb(80,80,80);
+    margin: 0;
+    padding: 24px;
+    width: 300px;
+}
+
+#userName, #password, #bankroll, #birthDate {
+    padding: 12px;
+    width: 87%;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+}
+
+.loginContainer input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    background: rgb(40,40,40);
+    color: yellow;
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Play', sans-serif;
+}
+
+.userData{
+    padding: 12px;
+    width: 87%;
+    font-family: 'Play', sans-serif; 
+    background: rgb(120,120,120);
+    color: yellow;
+}
+
+.errorInput {
+    border: 1px solid red;
+}
+
+.hidden {
+    display: none;
+}
+
+.pageContainer {
+    width: 1500px;
+    margin: 0 auto 0 110px;
+    background: #1e1e1e;
+    color: rgb(220,220,220);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#bettingContainer {
+    width: 87.5%;
+    margin: 20px 0;
+    display: none;
+}
+
+.opaciNull{
+    opacity: 0;
+}
+
+.fade {
+    -webkit-animation: fade 2s;
+    animation: fade 2s;
+    opacity: 1;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+#bettingContainer caption {
+    background-color:  rgb(60,60,60);
+    font-weight: bold;
+}
+
+
+#bettingContainer th {
+    background-color: rgb(60,60,60);
+    padding: 4px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(120,120,120);
+    height: 29px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(90,90,90);
+    height: 29px;
+}
+
+tr:hover {
+    background: #1e1e1e;
+}
+
+.clicked {
+    font-weight: bold;
+    color: yellow;
+}
+
+#bettingContainer td {
+    padding: 4px 0 4px 4px;
+}
+
+#bettingContainer td:nth-child(1) {
+    width: 34px;
+}
+
+#bettingContainer td:nth-child(2) {
+    width: 175px;
+}
+
+.groupsContainer {
+    background: rgb(60,60,60);
+    border: 2px solid rgb(80,80,80);
+    margin: 2px auto;
+    width: 430px;
+    display: inline-block
+}
+
+.groups {
+    display: inline-block;
+    margin: 10px 10px;
+    border: 1px solid yellow;
+    width: 408px;
+}
+
+.matches {
+    font-size: 0.75em;
+    vertical-align: top;
+    display: inline-block;
+    width: 405px;
+    margin: 10px 10px;
+    padding: 2px;
+    background: rgb(60,60,60);
+    border: 1px solid yellow;
+}
+
+.matchesDiv > div{
+    float: left;
+    width: 10%;
+    text-align: left;
+}
+
+.matchesDiv .teamsInMatch{
+    width: 22%;
+}
+
+.teamsInMatch:hover{
+    cursor: pointer;
+}
+
+.matchesDiv .oddsRight,
+.matchesDiv .teamsInMatch:nth-of-type(1){
+    text-align: right;
+}
+
+.matchesDiv .teamsInMatch:nth-of-type(2){
+    text-align: right
+}
+
+.matchesDiv .result{
+    text-align: center;
+}
+
+.goals {
+    display: inline-block;
+}
+
+.betBoxInput {
+    font-family: 'Play', sans-serif;
+    width: 50px;
+    text-align: right;
+    padding: 1px;
+    background: rgb(160,160,160);
+    border: 1px solid #1e1e1e;
+    color: black;
+    margin: 0 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.betButton {
+    font-family: 'Play', sans-serif;
+    width: 22px;
+    background: yellow;
+    color: #1e1e1e;
+    font-weight: 800;
+    border: 1px solid #1e1e1e;
+    margin: 1px;
+    outline: none;
+}
+.betButton:hover {
+    cursor: pointer;
+}
+
+.result {
+    float:center;
+}
+
+#databaseContainer {
+    display: none;
+}
+
+.best16, best16Matches {
+    display: inline-block;
+    width: 100%;
+}
+
+.best16Matches{
+    border: 1px solid rgb(80,80,80);
+    background: rgb(60,60,60);
+    margin: 10px 0;
+}
+
+.best16Teams {
+    display: inline-block;
+    width: 49%;
+    border: 1px solid yellow;
+    background: rgb(40,40,40);
+    margin: 3px;
+    padding: 2px;
+}
+
+.best16Team1, .best16Team2 {
+    display: inline-block;
+    width: 180px;
+}
+
+.best16Team1:hover, .best16Team2:hover{
+    cursor: pointer;
+}
+
+.best16Team1 {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.best16Team2 {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.oddsRightBest16, .oddsLeftBest16 {
+    display: inline-block;
+    width: 40px;
+}
+
+.best16Logo {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.resultBest16, .resultBest8, .resultBest4, .finalResult{
+    display: inline-block;
+    text-align: center;
+    width: 30px
+}
+
+.best8, best8Matches {
+    display: inline-block;
+    width: 100%;
+}
+
+.best8Matches{
+    border: 1px solid rgb(80,80,80);
+    background: rgb(60,60,60);
+    margin: 10px 0;
+}
+
+.best8Teams {
+    display: inline-block;
+    width: 49%;
+    background: rgb(80,80,80)
+}
+
+.best8Team1, .best8Team2 {
+    display: inline-block;
+    width: 180px;
+}
+
+.best8Team1:hover, .best8Team2:hover{
+    cursor: pointer;
+}
+
+.best8Team1 {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.best8Team2 {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.oddsRightBest8, .oddsLeftBest8 {
+    display: inline-block;
+    width: 40px;
+}
+
+.best16Logo {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.best4, best4Matches {
+    display: inline-block;
+    width: 100%;
+}
+
+.best4Matches{
+    border: 1px solid rgb(80,80,80);
+    background: rgb(60,60,60);
+    margin: 10px 0;
+}
+
+.best4Teams {
+    display: inline-block;
+    width: 49%;
+    background: rgb(80,80,80)
+}
+
+.best4Team1, .best4Team2 {
+    display: inline-block;
+    width: 180px;
+}
+
+.best4Team1:hover, .best4Team2:hover{
+    cursor: pointer;
+}
+
+.best4Team1 {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.best4Team2 {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.oddsRightBest4, .oddsLeftBest4 {
+    display: inline-block;
+    width: 40px;
+}
+
+.final, .finalMatch {
+    display: inline-block;
+    width: 100%;
+}
+
+.finalMatch{
+    border: 1px solid rgb(80,80,80);
+    background: rgb(60,60,60);
+    margin: 10px 0;
+}
+
+
+.finalTeams {
+    display: inline-block;
+    width: 49%;
+    background: rgb(80,80,80)
+}
+
+.finalTeam1, .finalTeam2 {
+    display: inline-block;
+    width: 180px;
+}
+
+.finalTeam1:hover, .finalTeam2:hover{
+    cursor: pointer;
+}
+
+.finalTeam1 {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.finalTeam2 {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.oddsRightFinal, .oddsLeftFinal {
+    display: inline-block;
+    width: 40px;
+}
+
+.simulateBtn {
+    position: relative;
+    left: 50px;
+    background: rgb(40,40,40);
+    color: yellow;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid rgb(80,80,80)
+}
+
+.simulateBtn:hover {
+    cursor: pointer;
+    background: black;
+}
+
+#csapatBank {
+    border: 1px solid rgb(80,80,80);
+    background: rgb(60,60,60);
+    width: 87%;
+}
+
+.teamsInDB {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#databaseContainer th {
+    background-color: rgb(80,80,80);
+    padding: 4px;
+    text-align: left;
+}
+
+.playersTable{
+    margin: 20px 400px;
+}
+
+.dbTeams {
+    font-size: 1.2em;
+    display: inline-block;
+    width: 24%;
+    margin: 5px 4px;
+    background: rgb(40,40,40);
+    padding: 1px;
+    border: 1px solid yellow;
+}
+
+.noPlayer{
+    width: 87%;
+    text-align: center;
+    background: rgb(80,80,80);
+    border: 1px solid yellow;
+    height: 200px;
+    font-size: 4em;
+    margin: 30px 0;
+}
+
+.deleteBtn {
+    width: 100%;
+    background: rgb(40,40,40);
+    color: yellow;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid rgb(80,80,80)
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+    background: black;
+}
+
+footer {
+    color: rgb(220,220,220);
+}
+
+footer p {
+    margin-left: 120px;
+    margin-bottom: 100px;
+}
+
+.sortPlayers:hover {
+    cursor: pointer;
+}
+
+.searchBtn {
+    background: rgb(40,40,40);
+    color: yellow;
+    outline: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid rgb(80,80,80)
+}
+
+.searchBtn:hover {
+    cursor: pointer;
+    background: black;
+}
+
+ .searchInput {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid rgb(80,80,80)
+ }
+
+ .invisibleRow {
+     height: 0px;
+ }

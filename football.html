@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf8">
+        <link rel="icon" href="img/smallicon.png">
+        <link href ="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <title>UCL Betting</title>
+    </head>
+    <body>
+        <header>   
+            <div class="headerContainer">
+                <img src="img/logowhite.png">
+                <div class="title"><h2>UCL Betting</h2></div>
+                <div class="nav-bar">
+                    <input type="button" class="nav-btn" value="Főoldal" id="mainPageBtn"><input
+                    type="button" class="nav-btn" value ="Adatbázis" id="tablePageBtn"><input
+                    type="button" class="nav-btn" value ="Fogadás" id="bettingPageBtn">
+                </div>
+            </div>
+        </header>
+        <div class="login">
+            <h2>Log in</h2>
+            <form onsubmit="login()" class="loginContainer">
+                <p>
+                    <input type="text" id="userName" placeholder="username">
+                </p>
+                <p>
+                    <input type="password" id="password" placeholder="password">
+                </p>
+                <p>
+                    <input type="date" id="birthDate">
+                </p>
+                <p>
+                    <input type="number" id="bankroll" placeholder="Feltölteni kívánt összeg">
+                </p>
+                <p>
+                    <input type="button" value="Log in" id="loginBtn">
+                </p>
+            </form>
+        </div>
+        <div class="user">
+            <h2>Adatok</h2>
+            <div class="userContainer"></div>
+            <input type="button" class="deleteBtn" value="Utolsó fogadás törlése" onclick="deleteLast(bets)">
+            <br>
+        </div>
+        <div class="pageContainer">
+            <div id="mainContainer">
+                <h2>Üdvözöljük az UCL Betting holnlapján</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fz2bEoyksn8?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div id="databaseContainer">
+                <h4>(A csapatokra kattintva megtekinthetők a játékosok)</h4>
+                <div id="csapatBank"></div>
+                <div id="noPlayers"></div>
+                <table id="playersTable" class="playersTable opaciNull"></table>
+                <h2>Keresés</h2>
+                <input type="text" id="searchInput" class="searchInput"><input type="button" onclick="playerSearch()" value="Keresés név alapján" class="searchBtn"><input
+                 type="button" onclick="playerSearchByNat()" value="Keresés nemzetiség alapján" class="searchBtn"><input type="button" onclick="playerSearchByPos()" value="Keresés poszt alapján" class="searchBtn">
+                <table id="playersByName" class="playersTable"></table>
+            </div>
+            <div id="bettingContainer" class="opaciNull">
+                <h2 style="display: inline-block">Csoportkör</h2><input type="button" value="Szimuláció" class="simulateBtn" onclick="simulation()">
+                <br>
+                <div class="groupsContainer">
+                    <table id="group0" class="groups"></table>
+                    <div id="matches0" class="matches"></div>
+                </div>
+                <div class="groupsContainer">
+                    <table id="group1" class="groups"></table>
+                    <div id="matches1" class="matches"></div>
+                </div>
+                <div class="groupsContainer">
+                    <table id="group2" class="groups"></table>
+                    <div id="matches2" class="matches"></div>
+                </div>
+                <div class="groupsContainer">
+                    <table id="group3" class="groups"></table>
+                    <div id="matches3" class="matches"></div>
+                </div>
+                <div class="groupsContainer">
+                    <table id="group4" class="groups"></table>
+                    <div id="matches4" class="matches"></div>
+                </div>
+                <div class="groupsContainer">
+                    <table id="group5" class="groups"></table>
+                    <div id="matches5" class="matches"></div>
+                </div>
+                <div class="groupsContainer">
+                    <table id="group6" class="groups"></table>
+                    <div id="matches6" class="matches"></div>
+                </div>
+                <div class="groupsContainer">
+                    <table id="group7" class="groups"></table>
+                    <div id="matches7" class="matches"></div>
+                </div>
+                <div class="best16"><div id="best16" class="best16Matches opaciNull"></div></div>
+                <div class="best8"><div id="best8" class="best8Matches opaciNull"></div></div>
+                <div class="best4"><div id="best4" class="best4Matches opaciNull"></div></div>
+                <div class="final"><div id="final" class="finalMatch opaciNull"></div></div>
+            </div>
+        </div>
+        <footer>
+            <hr>
+            <p>Copyright &#169 2017 Petyka</p>
+        </footer>
+        <script src="teams.js"></script>
+        <script src="main.js"></script>
+        <script src="main2.js"></script>
+    </body>
+</html>
