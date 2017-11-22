@@ -369,7 +369,7 @@ input[type=number]::-webkit-outer-spin-button {
 .resultBest16, .resultBest8, .resultBest4, .finalResult{
     display: inline-block;
     text-align: center;
-    width: 30px
+    min-width: 30px
 }
 
 .best8, best8Matches {
